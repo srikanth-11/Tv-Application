@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url("background.jpg");
+}
+
+.tv-container {
+  max-width: 1024px;
+  width: 740px;
+  height: 100%;
+  position: relative;
+  top: 15%;
+  left: 15%;
+}
+
+.monitor {
+  background: #000;
+  position: relative;
+  border: 3px solid rgb(13, 171, 192);
+  padding: 2% 2% 4% 2%;
+  border-radius: 10px;
+  border-bottom-left-radius: 50% 2%;
+  border-bottom-right-radius: 50% 2%;
+}
+
+.monitor:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 3%;
+  left: 31%;
+  height: 2%;
+  width: 38%;
+  background: rgb(23, 104, 158);
+  border-radius: 50%;
+  box-shadow: 0 0 3px 0 rgb(126, 131, 184);
+}
+
+.monitor-screen {
+  background-color: rgb(151, 137, 137);
+  background-size: cover;
+  background-position: top center;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-container {
+  width: 100%;
+  height: inherit;
+}
+
+.remote {
+  position: relative;
+  top: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  body {
+    grid-template-columns: auto;
+  }
+  .tv-container {
+    width: 100%;
+  }
+}
